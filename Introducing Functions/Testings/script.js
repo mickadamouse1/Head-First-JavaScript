@@ -1,13 +1,15 @@
-var i = 2;
+var balance = 10500;
+var cameraOn = true;
 
-function add() {
-  for (i = 0; i <= 10; i++) {
-    console.log(i);
+function steal(balance, amount) {
+  cameraOn = false;
+  if (amount < balance) {
+    balance = balance - amount;
   }
+  return amount;
+  cameraOn = true;
 }
 
-add();
-
-if (i ==11) {
-  console.log("yoyo");
-}
+var amount = steal(balance, 1250);
+console.log(balance);
+console.log("Criminal: you stole " + amount + "!");
