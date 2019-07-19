@@ -7,11 +7,25 @@ var chevy = {
   convertible: false,
   mileage: 1021,
   weightLimitKg: 500,
-  wheels: 4
+  wheels: 4,
+  started: false,
+  start: function() {
+    this.started = true;
+  },
+  stop: function() {
+    this.started = false;
+  },
+  drive: function() {
+    if (this.started) {
+      console.log(`The ${this.make} goes "Zoom zoom!"`);
+    } else {
+      console.log("The car isn't on...");
+    }
+  }
 };
 
 var taxi = {
-  make: "TX4",
+  make: "Taxi",
   model: "Hackney Carriage",
   year: 2002,
   color: "black",
@@ -19,7 +33,21 @@ var taxi = {
   convertible: false,
   mileage: 3436,
   weightLimitKg: 1500,
-  wheels: 4
+  wheels: 4,
+  started: false,
+  start: function() {
+    this.started = true;
+  },
+  stop: function() {
+    this.started = false;
+  },
+  drive: function() {
+    if (this.started) {
+      console.log(`The ${this.make} goes "Zoom zoom!"`);
+    } else {
+      console.log("The car isn't on...");
+    }
+  }
 };
 
 var cadi = {
@@ -31,7 +59,21 @@ var cadi = {
   convertible: false,
   mileage: 12892,
   weightLimitKg: 750,
-  wheels: 4
+  wheels: 4,
+  started: false,
+  start: function() {
+    this.started = true;
+  },
+  stop: function() {
+    this.started = false;
+  },
+  drive: function() {
+    if (this.started) {
+      console.log(`The ${this.make} goes "Zoom zoom!"`);
+    } else {
+      console.log("The car isn't on...");
+    }
+  }
 };
 
 var fiat = {
@@ -43,20 +85,32 @@ var fiat = {
   convertible: false,
   mileage: 88000,
   weightLimitKg: 1200,
-  wheels: 4
+  wheels: 4,
+  started: false,
+  start: function() {
+    this.started = true;
+  },
+  stop: function() {
+    this.started = false;
+  },
+  drive: function() {
+    if (this.started) {
+      console.log(`The ${this.make} goes "Zoom zoom!"`);
+    } else {
+      console.log("The car isn't on...");
+    }
+  }
 };
 
+function driveRandomCar() {
+  var cars = [fiat, cadi, taxi, chevy];
+  var car = cars[Math.floor(Math.random() * cars.length)];
+  car.start();
+  car.drive();
+}
 
-var cars = [chevy, taxi, cadi, fiat];
+driveRandomCar();
 
-var miles = cars[Math.floor(Math.random() * cars.length)];
-  fiat.needsWashing = true;
-  console.log(miles.make);
-  console.log("Mileage is " + miles.mileage + "km");
-  console.log(miles.needsWashing);
-  miles.mileage;
-if (miles < 2000) {
-  console.log("Buy it!");
-} else {
-  console.log("Bin it!");
+for (var prop in chevy) {
+  console.log(`${prop}: ${chevy[prop]}`);
 }
