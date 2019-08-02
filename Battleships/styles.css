@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #333;
+  padding: 20px;
+  color: wheat;
+  font-size: 5rem;
+  font-family: sans-serif;
+}
+
+/* GLOBALS GLOBALS GLOBALS GLOBALS */
+/* GLOBALS GLOBALS GLOBALS GLOBALS */
+/* GLOBALS GLOBALS GLOBALS GLOBALS */
+
+
+#a1, #a2, #a3, #a4, #a5, #a6, #a7,
+#b1, #b2, #b3, #b4, #b5, #b6, #b7,
+#c1, #c2, #c3, #c4, #c5, #c6, #c7,
+#d1, #d2, #d3, #d4, #d5, #d6, #d7,
+#e1, #e2, #e3, #e4, #e5, #e6, #e7,
+#f1, #f2, #f3, #f4, #f5, #f6, #f7,
+#g1, #g2, #g3, #g4, #g5, #g6, #g7 {
+  border-bottom: solid 2px #101010;
+  border-right: solid 2px #101010;
+}
+
+#a8, #b8, #c8, #d8, #e8, #f8, #g8 {
+  border-bottom: solid 2px #101010;
+}
+
+#h1, #h2, #h3, #h4, #h5, #h6, #h7 {
+  border-right: solid 2px #101010;
+}
+
+/*  asd asd asd */
+
+#title {
+  margin: auto;
+  width: 69rem;
+}
+
+#battleGrid {
+  display: grid;
+  background: #202020;
+  width: 40rem;;
+  height: 40rem;;
+  margin: auto;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  border: solid 2px #101010;
+}
+
+.txtCell {
+  font-size: 15px;
+  padding: 5px 0 0 10px;
+  text-transform: capitalize;
+}
+
+.miss {
+  background: crimson;
+}
