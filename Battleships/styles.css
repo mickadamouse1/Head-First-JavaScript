@@ -48,7 +48,40 @@ body {
 
 #title {
   margin: auto;
-  width: 69rem;
+  text-align: center;
+  font-size: 5rem;
+}
+
+hr {
+  width: 40rem;
+  margin: auto;
+  border: solid;
+}
+
+#txtOutput {
+  font-size: 4rem;
+  text-align: center;
+}
+
+#gameBoard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#scoreWindow {
+  position: relative;
+  background: #606060;
+  padding: 12px;
+  height: 4rem;
+  width: 8rem;
+  bottom: 40rem;
+  right: 25rem;
+  border: solid 2px #111;
+}
+
+#scoreWindow p {
+  font-size: 1rem;
 }
 
 #battleGrid {
@@ -78,4 +111,20 @@ body {
 
 .ship {
   background: tomato;
+}
+
+button {
+  width: 9rem;
+  height: 3.5rem;
+  border: solid 2px #111;
+  background: #222;
+  font-size: 2rem;
+  position: relative;
+  bottom: 3rem;
+  outline: inherit;
+  color: wheat;
+}
+
+button:hover {
+  background: #333;
 }
