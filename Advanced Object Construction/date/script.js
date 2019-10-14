@@ -1,34 +1,17 @@
-
-console.log("Current Time:");
 var now = new Date();
-console.log(now);
+console.log(`Full Date:-- ${now} -- ${typeof now}`);
 
-console.log(""); // Line breaks for readability
-
-console.log("Current Date:");
 var dateString = now.toString();
-console.log(dateString);
+console.log(`Date String:-- ${dateString} -- ${typeof dateString}`);
 
-console.log(""); // Line breaks for readability
-
-console.log("Current Year:");
 var theYear = now.getFullYear();
-console.log(theYear);
+console.log(`Current Year:-- ${theYear} -- ${typeof theYear}`);
 
-console.log(""); // Line breaks for readability
-
-console.log("Current Day of Week:");
 var theDayOfWeek = now.getDay();
-console.log(theDayOfWeek);
+console.log(`Current Day:-- ${theDayOfWeek} -- ${typeof theDayOfWeek}`);
 
-console.log(""); // Line breaks for readability
+var days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+console.log(`Current Day:-- ${days[theDayOfWeek - 1]} -- ${typeof days[theDayOfWeek - 1]}`);
 
-console.log("Birthday:");
-var birthday = new Date("May 1, 1983");
-console.log(birthday);
-
-console.log(""); // Line breaks for readability
-
-console.log("Time of Birth:");
-var birthday2 = new Date("May 1 1983 08:03 pm");
-console.log(birthday2);
+var birthday = new Date("March 1, 1997 05:25 pm");
+console.log(`My Birthday:-- ${birthday} -- ${typeof birthday}`);
