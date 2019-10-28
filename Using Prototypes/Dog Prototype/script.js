@@ -1,19 +1,3 @@
-// var dogPrototype = {
-//   species: "Canine",
-//
-//   bark: function() {
-//     console.log("Woof");
-//   },
-//
-//   run: function() {
-//     console.log("Run");
-//   },
-//
-//   wag: function() {
-//     console.log("Wag");
-//   }
-// };
-
 function Dog(name, breed, weight) {
   this.name = name;
   this.breed = breed;
@@ -23,21 +7,25 @@ function Dog(name, breed, weight) {
 Dog.prototype.species = "Canine";
 Dog.prototype.bark = function() {
   if (this.weight > 25) {
-    console.log("WOOF WOOF");
+    console.log(`${this.name} goes WOOF WOOF!`);
   } else {
-    console.log("wewf wewf...");
+    console.log(`${this.name} goes wewf wewf...`);
   }
 }
 Dog.prototype.run = function() {
-  console.log("Run!");
+  console.log(`${this.name} Runs!`);
 }
 Dog.prototype.wag = function() {
-  console.log("Wag!");
+  console.log(`${this.name} Wags!`);
 }
 
 var fido = new Dog("Fido", "Dog", 38);
 var fluffy = new Dog("Fluffy", "Dog", 30);
 var spot = new Dog("Spot", "Dog", 10);
+
+spot.bark = function() {
+  console.log(`${this.name} goes WOOF WOOF!`);
+}
 
 fido.bark();
 fluffy.bark();
