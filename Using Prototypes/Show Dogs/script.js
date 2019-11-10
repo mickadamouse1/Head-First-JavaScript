@@ -42,10 +42,26 @@ ShowDog.prototype.stack = function() {
   console.log(`${this.name} stacks!`);
 };
 
+ShowDog.prototype.bait = function() {
+  console.log(`${this.name} baits!`);
+};
+
+ShowDog.prototype.groom = function() {
+  console.log(`${this.name} grooms!`);
+};
+
+ShowDog.prototype.gait = function(kind) {
+  console.log(`${kind}ing`);
+}
+
 var scott = new ShowDog("Scott", "Dog", 12, "Jeb");
 
 scott.stack();
+scott.bait();
+scott.groom();
+scott.gait("laugh");
 scott.bark();
-fido.stack();
+console.log(scott.league);
+console.log(scott.species);
 
 //
